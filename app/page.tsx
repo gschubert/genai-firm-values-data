@@ -94,7 +94,8 @@ export default function Home() {
               AI exposure experienced positive abnormal returns following ChatGPT&apos;s release, suggesting investors
               expect profitability gains from AI adoption. AI can boost firm profitability in two ways: replacing
               occupations with core tasks exposed to generative AI, or enhancing occupations with supplemental
-              tasks exposed to generative AI.
+              tasks exposed to generative AI. Importantly, <strong>the market reacted positively only to core task exposure</strong>,
+              consistent with investors expecting labor cost savings from AI-driven automation of primary job functions.
             </p>
           </div>
 
@@ -301,6 +302,45 @@ export default function Home() {
           </div>
         </section>
 
+        <section className="mb-20 bg-white rounded-3xl p-10 shadow-lg hover:shadow-xl transition-shadow duration-300 border border-gray-100">
+          <h2 className="text-4xl font-bold mb-8 text-gray-900">Citation</h2>
+
+          <div className="space-y-8">
+            <div>
+              <h3 className="text-xl font-bold mb-4 text-gray-800">Suggested Citation</h3>
+              <div className="bg-gradient-to-br from-blue-50 to-indigo-50 p-6 rounded-2xl border border-blue-100">
+                <p className="text-gray-800 leading-relaxed mb-4">
+                  Eisfeldt, Andrea L., Gregor Schubert, Bledi Taska, and Miao Ben Zhang. 2026.
+                  &quot;Generative AI and Firm Values.&quot; <em>Journal of Finance</em>, forthcoming.
+                </p>
+                <CopyButton text='Eisfeldt, Andrea L., Gregor Schubert, Bledi Taska, and Miao Ben Zhang. 2026. "Generative AI and Firm Values." Journal of Finance, forthcoming.' />
+              </div>
+            </div>
+
+            <div>
+              <h3 className="text-xl font-bold mb-4 text-gray-800">BibTeX Entry</h3>
+              <div className="bg-gradient-to-br from-gray-50 to-slate-50 p-6 rounded-2xl border border-gray-200 relative">
+                <pre className="text-sm text-gray-800 overflow-x-auto font-mono mb-4">
+{`@article{eisfeldt2026generative,
+  title={Generative AI and Firm Values},
+  author={Eisfeldt, Andrea L and Schubert, Gregor and Taska, Bledi and Zhang, Miao Ben},
+  journal={Journal of Finance},
+  year={2026},
+  note={Forthcoming}
+}`}
+                </pre>
+                <CopyButton text={`@article{eisfeldt2026generative,
+  title={Generative AI and Firm Values},
+  author={Eisfeldt, Andrea L and Schubert, Gregor and Taska, Bledi and Zhang, Miao Ben},
+  journal={Journal of Finance},
+  year={2026},
+  note={Forthcoming}
+}`} />
+              </div>
+            </div>
+          </div>
+        </section>
+
         <section className="mb-20">
           <h2 className="text-4xl font-bold mb-10 text-gray-900">Key Findings</h2>
 
@@ -348,43 +388,27 @@ export default function Home() {
                 </p>
               </div>
             </div>
-          </div>
-        </section>
 
-        <section className="mb-20 bg-white rounded-3xl p-10 shadow-lg hover:shadow-xl transition-shadow duration-300 border border-gray-100">
-          <h2 className="text-4xl font-bold mb-8 text-gray-900">Citation</h2>
-
-          <div className="space-y-8">
-            <div>
-              <h3 className="text-xl font-bold mb-4 text-gray-800">Suggested Citation</h3>
-              <div className="bg-gradient-to-br from-blue-50 to-indigo-50 p-6 rounded-2xl border border-blue-100">
-                <p className="text-gray-800 leading-relaxed mb-4">
-                  Eisfeldt, Andrea L., Gregor Schubert, Bledi Taska, and Miao Ben Zhang. 2026.
-                  &quot;Generative AI and Firm Values.&quot; <em>Journal of Finance</em>, forthcoming.
+            <div className="bg-white rounded-3xl p-8 shadow-lg hover:shadow-xl transition-shadow duration-300 border border-gray-100">
+              <h3 className="text-2xl font-bold mb-6 text-gray-900">
+                Core vs. Supplemental Task Exposure
+              </h3>
+              <div className="bg-gradient-to-br from-gray-50 to-purple-50/30 p-6 rounded-2xl">
+                <Image
+                  src="/figures/task_magnitude.png"
+                  alt="Core-Task vs Supplemental-Task Generative AI Exposure by Occupation"
+                  width={800}
+                  height={600}
+                  className="w-full h-auto rounded-xl shadow-md"
+                  unoptimized
+                />
+                <p className="text-sm text-gray-600 mt-6 leading-relaxed">
+                  <strong>Figure 3: Core-Task vs. Supplemental-Task Exposure to Generative AI.</strong> Each dot represents
+                  a SOC 6-digit occupation, plotted by its core-task exposure (x-axis) and supplemental-task exposure (y-axis).
+                  Occupations below the 45-degree line have primarily core-task exposure (e.g., Word Processors, Proofreaders,
+                  Information Security Analysts), while those above have primarily supplemental-task exposure (e.g., Pharmacy Aides,
+                  Agricultural Inspectors). This distinction matters: stock markets responded positively only to core-task exposure.
                 </p>
-                <CopyButton text='Eisfeldt, Andrea L., Gregor Schubert, Bledi Taska, and Miao Ben Zhang. 2026. "Generative AI and Firm Values." Journal of Finance, forthcoming.' />
-              </div>
-            </div>
-
-            <div>
-              <h3 className="text-xl font-bold mb-4 text-gray-800">BibTeX Entry</h3>
-              <div className="bg-gradient-to-br from-gray-50 to-slate-50 p-6 rounded-2xl border border-gray-200 relative">
-                <pre className="text-sm text-gray-800 overflow-x-auto font-mono mb-4">
-{`@article{eisfeldt2026generative,
-  title={Generative AI and Firm Values},
-  author={Eisfeldt, Andrea L and Schubert, Gregor and Taska, Bledi and Zhang, Miao Ben},
-  journal={Journal of Finance},
-  year={2026},
-  note={Forthcoming}
-}`}
-                </pre>
-                <CopyButton text={`@article{eisfeldt2026generative,
-  title={Generative AI and Firm Values},
-  author={Eisfeldt, Andrea L and Schubert, Gregor and Taska, Bledi and Zhang, Miao Ben},
-  journal={Journal of Finance},
-  year={2026},
-  note={Forthcoming}
-}`} />
               </div>
             </div>
           </div>
