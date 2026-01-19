@@ -376,3 +376,51 @@ amh_website/
 ## Project Status: ✅ COMPLETE & DEPLOYMENT-READY
 
 The website is fully functional, beautifully designed, and ready for production deployment on Vercel. All data downloads work correctly, citations are accurate, and the design meets modern web standards.
+
+---
+
+## Session 3: Content Updates (January 19, 2026)
+
+### 15. ✅ Added Data Asset Measures Dataset
+
+#### New Dataset:
+Added a third dataset to the Data Downloads section - "Firm Data Asset Measures"
+
+**Files Added**:
+- `public/data/genaiexp_data_assets.csv` (copied from data/data_firm_scores.csv)
+- `public/data/genaiexp_data_assets.dta` (copied from data/data_firm_scores.dta)
+
+**Variable Structure (4 columns)**:
+| Column | Description |
+|--------|-------------|
+| `gvkey` | Compustat firm identifier |
+| `name` | Company name |
+| `dm3_sh` | AV Data Assets: workforce share in data management roles |
+| `gptdata_overall` | 10K Data Assets: GPT score (0-3) from 10-K analysis |
+
+**UI Implementation**:
+- Added purple-themed card matching existing design language
+- Both CSV and Stata download buttons
+- Local file hosting for proper download functionality
+
+### 16. ✅ Updated Headline Blurb
+
+Changed data repository listing from 2 to 3 items:
+1. Generative AI occupation exposure scores **(core and overall)** ← Updated
+2. Generative AI firm exposure scores
+3. Firm data asset measures ← **New**
+
+Added purple-gradient badge for item 3 to maintain visual consistency.
+
+### 17. ✅ Enhanced About Section
+
+Updated methodology paragraph to explain the core vs. supplemental distinction:
+
+> "We construct novel measures of generative AI exposure at both the occupation and firm levels, leveraging detailed task-level data to assess which jobs and companies face the greatest potential for AI-driven transformation. Our findings reveal significant market reactions: firms with higher AI exposure experienced positive abnormal returns following ChatGPT's release, suggesting investors **expect profitability gains** from AI adoption. **AI can boost firm profitability in two ways: replacing occupations with core tasks exposed to generative AI, or enhancing occupations with supplemental tasks exposed to generative AI.**"
+
+This explains why both core and overall exposure measures are important.
+
+### Build Verification
+- ✅ `npm run build` completed successfully
+- ✅ All data files properly placed in public/data/
+- ✅ No TypeScript or build errors

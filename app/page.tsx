@@ -59,13 +59,19 @@ export default function Home() {
                     <div className="flex-shrink-0 w-8 h-8 rounded-full bg-gradient-to-br from-blue-500 to-blue-600 text-white flex items-center justify-center text-sm font-bold shadow-lg shadow-blue-200">
                       1
                     </div>
-                    <span className="pt-1">Generative AI occupation exposure scores</span>
+                    <span className="pt-1">Generative AI occupation exposure scores (core and overall)</span>
                   </li>
                   <li className="flex items-start gap-3 group">
                     <div className="flex-shrink-0 w-8 h-8 rounded-full bg-gradient-to-br from-indigo-500 to-indigo-600 text-white flex items-center justify-center text-sm font-bold shadow-lg shadow-indigo-200">
                       2
                     </div>
                     <span className="pt-1">Generative AI firm exposure scores</span>
+                  </li>
+                  <li className="flex items-start gap-3 group">
+                    <div className="flex-shrink-0 w-8 h-8 rounded-full bg-gradient-to-br from-purple-500 to-purple-600 text-white flex items-center justify-center text-sm font-bold shadow-lg shadow-purple-200">
+                      3
+                    </div>
+                    <span className="pt-1">Firm data asset measures</span>
                   </li>
                 </ul>
               </div>
@@ -86,7 +92,9 @@ export default function Home() {
               leveraging detailed task-level data to assess which jobs and companies face the greatest potential
               for AI-driven transformation. Our findings reveal significant market reactions: firms with higher
               AI exposure experienced positive abnormal returns following ChatGPT&apos;s release, suggesting investors
-              anticipate productivity gains from AI adoption.
+              expect profitability gains from AI adoption. AI can boost firm profitability in two ways: replacing
+              occupations with core tasks exposed to generative AI, or enhancing occupations with supplemental
+              tasks exposed to generative AI.
             </p>
           </div>
 
@@ -231,6 +239,60 @@ export default function Home() {
                 >
                   <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                  </svg>
+                  Stata Format
+                </a>
+              </div>
+            </div>
+
+            <div className="group relative bg-gradient-to-br from-purple-50 to-violet-50 rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 border border-purple-100 hover:border-purple-200">
+              <h3 className="text-2xl font-bold mb-4 text-gray-900">
+                Firm Data Asset Measures
+              </h3>
+              <p className="text-gray-700 mb-6 leading-relaxed">
+                Two complementary measures of firms&apos; data assets that indicate readiness to leverage AI capabilities.
+              </p>
+              <div className="mb-6 text-sm text-gray-700 bg-white/70 backdrop-blur-sm p-4 rounded-xl shadow-sm">
+                <p className="font-semibold mb-3 text-gray-900">Variable Structure (4 columns):</p>
+                <ul className="space-y-2">
+                  <li className="flex items-start gap-2">
+                    <span className="text-purple-500 mt-1">•</span>
+                    <span><code className="bg-purple-100 text-purple-700 px-2 py-0.5 rounded-md text-xs font-mono">gvkey</code> - Compustat firm identifier</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="text-purple-500 mt-1">•</span>
+                    <span><code className="bg-purple-100 text-purple-700 px-2 py-0.5 rounded-md text-xs font-mono">name</code> - Company name</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="text-purple-500 mt-1">•</span>
+                    <code className="bg-purple-100 text-purple-700 px-2 py-0.5 rounded-md text-xs font-mono">dm3_sh</code>
+                    <span className="flex-1">- AV Data Assets: workforce share in data management roles</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="text-purple-500 mt-1">•</span>
+                    <code className="bg-purple-100 text-purple-700 px-2 py-0.5 rounded-md text-xs font-mono">gptdata_overall</code>
+                    <span className="flex-1">- 10K Data Assets: GPT score (0-3) from 10-K analysis</span>
+                  </li>
+                </ul>
+              </div>
+              <div className="flex flex-col sm:flex-row gap-3">
+                <a
+                  href="/data/genaiexp_data_assets.csv"
+                  className="flex-1 inline-flex items-center justify-center gap-2 px-5 py-3 bg-gradient-to-r from-purple-600 to-purple-700 text-white font-medium rounded-xl hover:from-purple-700 hover:to-purple-800 transition-all duration-200 shadow-lg shadow-purple-200 hover:shadow-xl hover:shadow-purple-300 hover:scale-105"
+                  download="genaiexp_data_assets.csv"
+                >
+                  <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                  </svg>
+                  Download CSV
+                </a>
+                <a
+                  href="/data/genaiexp_data_assets.dta"
+                  className="flex-1 inline-flex items-center justify-center gap-2 px-5 py-3 bg-white text-gray-700 font-medium rounded-xl hover:bg-gray-50 transition-all duration-200 border-2 border-gray-200 hover:border-gray-300 hover:scale-105"
+                  download="genaiexp_data_assets.dta"
+                >
+                  <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
                   </svg>
                   Stata Format
                 </a>
