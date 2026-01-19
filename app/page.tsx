@@ -157,7 +157,7 @@ export default function Home() {
               </div>
               <div className="flex flex-col sm:flex-row gap-3">
                 <a
-                  href="https://github.com/gschubert/website/raw/gh-pages/genaiexp_estz_occscores.csv"
+                  href="/data/genaiexp_estz_occscores.csv"
                   className="flex-1 inline-flex items-center justify-center gap-2 px-5 py-3 bg-gradient-to-r from-blue-600 to-blue-700 text-white font-medium rounded-xl hover:from-blue-700 hover:to-blue-800 transition-all duration-200 shadow-lg shadow-blue-200 hover:shadow-xl hover:shadow-blue-300 hover:scale-105"
                   download="genaiexp_estz_occscores.csv"
                 >
@@ -214,7 +214,7 @@ export default function Home() {
               </div>
               <div className="flex flex-col sm:flex-row gap-3">
                 <a
-                  href="https://github.com/gschubert/website/raw/gh-pages/genaiexp_estz_firmscores.csv"
+                  href="/data/genaiexp_estz_firmscores.csv"
                   className="flex-1 inline-flex items-center justify-center gap-2 px-5 py-3 bg-gradient-to-r from-emerald-600 to-emerald-700 text-white font-medium rounded-xl hover:from-emerald-700 hover:to-emerald-800 transition-all duration-200 shadow-lg shadow-emerald-200 hover:shadow-xl hover:shadow-emerald-300 hover:scale-105"
                   download="genaiexp_estz_firmscores.csv"
                 >
